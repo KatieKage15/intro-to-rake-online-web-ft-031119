@@ -28,6 +28,6 @@ end
 
   desc 'srop into the Pry console'
   task console: :environment do
-    Pry.start 
+    Pry.start
   end
 end
