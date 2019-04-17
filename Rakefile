@@ -1,3 +1,7 @@
+task :environment do
+  require_relative './config/environment'
+end
+
 namespace :greeting do
 desc 'outputs hello to the terminal'
   task :hello do
@@ -15,12 +19,11 @@ namespace :db do
   task :migrate => :environment do
     Student.create_table
   end
-end
+
   desc 'seed the database with some dummy date'
   task :seed do
     require_relative './db/seeds.rb'
   end
 end
-task :environment do
-  require_relative './config/environment'
-end
+
+
